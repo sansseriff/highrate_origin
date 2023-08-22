@@ -1,0 +1,30 @@
+[submodule "01_dm_channel_visibility"]
+	path = 01_dm_channel_visibility
+	url = https://github.com/sansseriff/highrate_01_dm_channel_visibility.git
+[submodule "02_dm_shg_scan"]
+	path = 02_dm_shg_scan
+	url = https://github.com/sansseriff/highrate_02_dm_shg_scan.git
+[submodule "03_fringes"]
+	path = 03_fringes
+	url = https://github.com/sansseriff/highrate_03_fringes.git
+[submodule "04_intf_imbalance"]
+	path = 04_intf_imbalance
+	url = https://github.com/sansseriff/highrate_04_intf_imbalance.git
+[submodule "05_channel_jsi"]
+	path = 05_channel_jsi
+	url = https://github.com/sansseriff/highrate_05_channel_jsi.git
+[submodule "06_jsi_model"]
+	path = 06_jsi_model
+	url = https://github.com/sansseriff/highrate_06_jsi_model.git
+[submodule "07_spdc_filter_spectrums"]
+	path = 07_spdc_filter_spectrums
+	url = https://github.com/sansseriff/highrate_07_spdc_filter_spectrums.git
+[submodule "08_time_walk_decoding"]
+	path = 08_time_walk_decoding
+	url = https://github.com/sansseriff/highrate_08_time_walk_decoding.git
+[submodule "10_with_without_timewalk"]
+	path = 10_with_without_timewalk
+	url = https://github.com/sansseriff/highrate_10_with_without_timewalk.git
+[submodule "09_time_walk_mcr"]
+	path = 09_time_walk_mcr
+	url = https://github.com/sansseriff/highrate_09_time_walk_mcr.git
