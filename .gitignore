@@ -8,3 +8,5 @@
 *.jpeg
 *.png
 
+!system.png
+

@@ -1,4 +1,9 @@
 
+This repository contains code for the manuscript titled "High-rate multiplexed entanglement source based on time-bin qubits for advanced quantum networks"
+
+![system](./system.png)
+
+
 This repository is used with datasets available in a [figshare project](https://figshare.com/projects/highrate_datasets_1/176379)
 
 Either use the setup process below or manually download the figshare dataset that corresponds to the folders/submodules in this repo.
