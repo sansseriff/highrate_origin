@@ -1,0 +1,49 @@
+#NEW install mambaforge https://github.com/conda-forge/miniforge#mambaforge
+
+# going off the windows section here:
+#C:\Users\Andrew\mambaforge\condabin>conda init
+#C:\Users\Andrew\mambaforge\condabin>mamba init
+
+#run: mamba env create -f environment_3.11.yaml
+
+
+
+# conda update -n base -c defaults conda
+# conda install mamba -n base -c conda-forge
+
+# conda env create -f environment.yaml
+
+
+name: highrate
+channels:
+  # - numba/label/pynext_ci
+  - conda-forge
+dependencies:
+  - python=3.11
+  - conda-forge::numpy
+  - conda-forge::jupyterlab
+  - conda-forge::matplotlib
+  - conda-build
+  - conda-forge::maturin
+  - conda-forge::orjson
+  - yaml
+  - pip
+  - conda-forge::scipy
+  - conda-forge::bokeh
+  - numba
+  - scikit-image
+  - scikit-learn
+  - conda-forge::ipywidgets
+  - conda-forge::attrs
+  - conda-forge::black
+  - conda-forge::docstring-to-markdown
+  - conda-forge::jedi
+  - conda-forge::mypy
+  - conda-forge::pydantic
+  - conda-forge::qutip
+  - pip:
+    - datamodel-code-generator
+    - Quantum-Tomography
+    - snsphd
+
+
