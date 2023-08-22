@@ -28,3 +28,9 @@ to install:
     ```
 
     Then follow the onscreen prompts. 
+
+
+To delete the conda environment if you no longer need it:
+```
+conda remove --name highrate
+```
