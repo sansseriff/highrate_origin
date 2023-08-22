@@ -5,18 +5,26 @@ Either use the setup process below or manually download the figshare dataset tha
 
 
 to install:
+1. clone repository
 
-```bash
-git init
-git pull https://github.com/sansseriff/highrate_origin.git
-git submodule update --init --recursive
-```
+    ```bash
+    git init
+    git pull https://github.com/sansseriff/highrate_origin.git
+    git submodule update --init --recursive
+    ```
 
 
+2. Set up conda environment:
 
-to set up conda environment:
+    ```bash
+    conda env create -f environment.yaml
+    conda activate highrate
+    ```
 
-```bash
-conda env create -f environment.yaml
-conda activate highrate
-```
+3. Download the data files for particular folders/submodules:
+
+    ```
+    python figshare_download.py
+    ```
+
+    Then follow the onscreen prompts. 
