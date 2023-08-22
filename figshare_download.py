@@ -13,8 +13,10 @@ import argparse
 import json
 import os
 import sys
-
+from tqdm import tqdm
+import yaml
 import requests
+import zipfile
 
 
 def figshare_get(args=None):
@@ -119,12 +121,58 @@ def get_article_files(article_id):
     return data
 
 
-def save_file(file_meta):
+def save_file(file_meta, path=""):
     r = requests.get(file_meta["download_url"], stream=True)
-    with open(file_meta["name"], "wb") as fd:
+
+    with open(os.path.join(path, file_meta["name"]), "wb") as fd:
         for chunk in r.iter_content(chunk_size=1024):
             fd.write(chunk)
 
+def save_file_p(file_meta, path=""):
+    r = requests.get(file_meta["download_url"], stream=True)
+
+    with open(os.path.join(path, file_meta["name"]), "wb") as fd:
+        total_size = int(file_meta["size"])
+        with tqdm(total=total_size, unit="B", unit_scale=True) as pbar:
+            for chunk in r.iter_content(chunk_size=1024):
+                fd.write(chunk)
+                pbar.update(len(chunk))
+
+    # Extract the zip file
+    print("Extracting zip file...")
+    with zipfile.ZipFile(os.path.join(path, file_meta["name"]), "r") as zip_ref:
+        zip_ref.extractall(path)
+
+    if input("Extraction complete. Delete zip file? (y/n)") == "y":
+        # Delete the zip file
+        os.remove(os.path.join(path, file_meta["name"]))
+    
+
+
+def download_manager():
+    print("""Each folder in this repo starts from a number 1-10.
+type the number of the folder you want to populate with data:""")
+    number = int(input())
+
+    if number< 0 or number > 10:
+        print("Number not in range 1-10")
+        sys.exit()
+
+
+    with open("figshare_metadata.yaml", "r") as f:
+        metadata = yaml.safe_load(f)
+
+    url = metadata[number]["url"]
+    code = url.split("/")[-1]
+    path = os.path.join(metadata[number]["path"],"data")
+
+    print(f"Downloading data from figshare code {code} to {path}")
+    print("This may take a while...")
+    save_file_p(get_article_files(code)[0], path=path)
+
+    print(f"Done! You should now be able to run the code in {metadata[number]['path'] + '/src'}")
+
+    
 
 if __name__ == "__main__":
-    save_file(get_article_files(20372646)[1])
+    download_manager()

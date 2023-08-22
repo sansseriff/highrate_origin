@@ -1,0 +1,30 @@
+1: 
+  url: https://figshare.com/articles/dataset/data_for_01_dm_channel_visibility/24012408
+  path: 01_dm_channel_visibility
+2: 
+  url: https://figshare.com/articles/dataset/data_for_02_dm_shg_scan/24012417
+  path: 02_dm_shg_scan
+3: 
+  url: https://figshare.com/articles/dataset/data_for_03_fringes/24012420
+  path: 03_fringes
+4: 
+  url: https://figshare.com/articles/dataset/data_for_04_intf_imbalance/24012423
+  path: 04_intf_imbalance
+5: 
+  url: https://figshare.com/articles/dataset/data_for_05_channel_jsi/24012429
+  path: 05_channel_jsi
+6: 
+  url: https://figshare.com/articles/dataset/data_for_05_channel_jsi/24012429
+  path: 05_channel_jsi
+7: 
+  url: https://figshare.com/articles/dataset/data_for_07_spdc_filter_spectrums/24012450
+  path: 07_spdc_filter_spectrums
+8: 
+  url: https://figshare.com/articles/dataset/data_for_08_time_walk_decoding/24012453
+  path: 08_time_walk_decoding
+9: 
+  url: https://figshare.com/articles/dataset/data_for_09_time_walk_mcr/24012459
+  path: 09_time_walk_mcr
+10: 
+  url: https://figshare.com/articles/dataset/data_for_10_with_without_timewalk/24012519
+  path: 10_with_without_timewalk
