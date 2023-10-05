@@ -39,7 +39,7 @@ dependencies:
   - conda-forge::docstring-to-markdown
   - conda-forge::jedi
   - conda-forge::mypy
-  - conda-forge::pydantic
+  - conda-forge::pydantic=1.10.7
   - conda-forge::qutip
   - pip:
     - datamodel-code-generator
